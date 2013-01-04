@@ -10,6 +10,11 @@
 
 @interface ViewController ()
 
+@property (strong, nonatomic) IBOutlet UIView *containerView;
+@property (weak, nonatomic) IBOutlet UILabel *titleLbl;
+@property (weak, nonatomic) IBOutlet UILabel *subtitleLbl;
+@property (weak, nonatomic) IBOutlet UILabel *textLbl;
+
 @end
 
 @implementation ViewController
@@ -18,6 +23,10 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+    [ThemeManager customizeBackground:self.containerView];
+    [ThemeManager customizeTitle:self.titleLbl];
+    [ThemeManager customizeSubtitle:self.subtitleLbl];
+    [ThemeManager customizeText:self.textLbl];
 }
 
 - (void)didReceiveMemoryWarning

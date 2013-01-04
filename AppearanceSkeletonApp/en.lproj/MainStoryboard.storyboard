@@ -4,7 +4,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1930"/>
     </dependencies>
     <scenes>
-        <!--View Controller - My Beautiful app-->
+        <!--View Controller - My app-->
         <scene sceneID="5">
             <objects>
                 <viewController id="2" customClass="ViewController" sceneMemberID="viewController">
@@ -15,7 +15,6 @@
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="View Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Pa-eA-Dh6">
                                 <constraints>
                                     <constraint firstAttribute="height" constant="22" id="Q1h-J6-8gv"/>
-                                    <constraint firstAttribute="width" constant="285" id="q66-kg-6tg"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -29,29 +28,37 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xCH-Cw-hJU">
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="TopLeft" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="275" translatesAutoresizingMaskIntoConstraints="NO" id="dD3-Zt-EJ4">
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="401" id="HuR-ua-lYi"/>
+                                    <constraint firstAttribute="width" constant="275" id="Sz9-aH-7ZV"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="338" type="user" id="zJ3-9A-SJ5"/>
                                 </constraints>
-                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
+                                <mutableString key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</mutableString>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="5Pa-eA-Dh6" firstAttribute="centerX" secondItem="dD3-Zt-EJ4" secondAttribute="centerX" type="default" id="4qs-w5-2EL"/>
                             <constraint firstAttribute="trailing" secondItem="h65-T6-mpQ" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="ASM-60-2Va"/>
-                            <constraint firstItem="h65-T6-mpQ" firstAttribute="centerX" secondItem="xCH-Cw-hJU" secondAttribute="centerX" type="default" id="AvQ-7h-Iyy"/>
                             <constraint firstItem="h65-T6-mpQ" firstAttribute="top" secondItem="5Pa-eA-Dh6" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="E0C-cE-IKS"/>
-                            <constraint firstItem="xCH-Cw-hJU" firstAttribute="top" secondItem="h65-T6-mpQ" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="Fm1-12-7Yx"/>
+                            <constraint firstItem="dD3-Zt-EJ4" firstAttribute="top" secondItem="h65-T6-mpQ" secondAttribute="bottom" priority="992" constant="8" symbolic="YES" type="user" id="K2v-Pc-pP2"/>
                             <constraint firstItem="h65-T6-mpQ" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="Sk4-47-BTL"/>
+                            <constraint firstAttribute="trailing" secondItem="dD3-Zt-EJ4" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="V9h-sm-Pfv"/>
                             <constraint firstItem="5Pa-eA-Dh6" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="Zm2-Tl-dUl"/>
-                            <constraint firstItem="5Pa-eA-Dh6" firstAttribute="trailing" secondItem="xCH-Cw-hJU" secondAttribute="trailing" type="default" id="Zya-eg-1hC"/>
+                            <constraint firstItem="dD3-Zt-EJ4" firstAttribute="top" relation="lessThanOrEqual" secondItem="3" secondAttribute="top" constant="104" type="user" id="kNx-Uc-bBb"/>
                             <constraint firstItem="5Pa-eA-Dh6" firstAttribute="top" secondItem="3" secondAttribute="top" constant="25" id="obY-y2-W7z"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="My Beautiful app" id="gaT-KF-Elf"/>
+                    <navigationItem key="navigationItem" title="My app" id="gaT-KF-Elf"/>
+                    <connections>
+                        <outlet property="containerView" destination="3" id="76Q-Za-t55"/>
+                        <outlet property="subtitleLbl" destination="h65-T6-mpQ" id="qyf-2x-b1U"/>
+                        <outlet property="textLbl" destination="dD3-Zt-EJ4" id="GHZ-kJ-dTD"/>
+                        <outlet property="titleLbl" destination="5Pa-eA-Dh6" id="9Zz-yi-Qa5"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4" sceneMemberID="firstResponder"/>
             </objects>
@@ -82,6 +89,12 @@
         </class>
         <class className="ViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/ViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="containerView" candidateClass="UIView"/>
+                <relationship kind="outlet" name="subtitleLbl" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="textLbl" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="titleLbl" candidateClass="UILabel"/>
+            </relationships>
         </class>
     </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

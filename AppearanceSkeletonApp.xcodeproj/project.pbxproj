@@ -23,6 +23,11 @@
 		2EC6824516971AFC00168977 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2EC6822016971AFB00168977 /* Foundation.framework */; };
 		2EC6824D16971AFC00168977 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2EC6824B16971AFC00168977 /* InfoPlist.strings */; };
 		2EC6825016971AFC00168977 /* AppearanceSkeletonAppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EC6824F16971AFC00168977 /* AppearanceSkeletonAppTests.m */; };
+		2EC6825C16971F2400168977 /* Theme.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EC6825B16971F2400168977 /* Theme.m */; };
+		2EC6825F1697226C00168977 /* DefaultTheme.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EC6825E1697226C00168977 /* DefaultTheme.m */; };
+		2EC6827816972DBC00168977 /* WDFridayTheme.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EC6827716972DBC00168977 /* WDFridayTheme.m */; };
+		2EC6827E1697305F00168977 /* topShadow.png in Resources */ = {isa = PBXBuildFile; fileRef = 2EC6827C1697305F00168977 /* topShadow.png */; };
+		2EC6827F1697305F00168977 /* topShadow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2EC6827D1697305F00168977 /* topShadow@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +63,14 @@
 		2EC6824C16971AFC00168977 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		2EC6824E16971AFC00168977 /* AppearanceSkeletonAppTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppearanceSkeletonAppTests.h; sourceTree = "<group>"; };
 		2EC6824F16971AFC00168977 /* AppearanceSkeletonAppTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppearanceSkeletonAppTests.m; sourceTree = "<group>"; };
+		2EC6825A16971F2400168977 /* Theme.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Theme.h; sourceTree = "<group>"; };
+		2EC6825B16971F2400168977 /* Theme.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Theme.m; sourceTree = "<group>"; };
+		2EC6825D1697226C00168977 /* DefaultTheme.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DefaultTheme.h; sourceTree = "<group>"; };
+		2EC6825E1697226C00168977 /* DefaultTheme.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DefaultTheme.m; sourceTree = "<group>"; };
+		2EC6827616972DBC00168977 /* WDFridayTheme.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WDFridayTheme.h; sourceTree = "<group>"; };
+		2EC6827716972DBC00168977 /* WDFridayTheme.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WDFridayTheme.m; sourceTree = "<group>"; };
+		2EC6827C1697305F00168977 /* topShadow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = topShadow.png; sourceTree = "<group>"; };
+		2EC6827D1697305F00168977 /* topShadow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "topShadow@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +130,8 @@
 		2EC6822416971AFB00168977 /* AppearanceSkeletonApp */ = {
 			isa = PBXGroup;
 			children = (
+				2EC682791697302700168977 /* images */,
+				2EC6825916971F0700168977 /* Theme */,
 				2EC6822D16971AFB00168977 /* AppDelegate.h */,
 				2EC6822E16971AFC00168977 /* AppDelegate.m */,
 				2EC6823616971AFC00168977 /* MainStoryboard.storyboard */,
@@ -158,6 +173,44 @@
 				2EC6824B16971AFC00168977 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		2EC6825916971F0700168977 /* Theme */ = {
+			isa = PBXGroup;
+			children = (
+				2EC6825A16971F2400168977 /* Theme.h */,
+				2EC6825B16971F2400168977 /* Theme.m */,
+				2EC6825D1697226C00168977 /* DefaultTheme.h */,
+				2EC6825E1697226C00168977 /* DefaultTheme.m */,
+				2EC6827616972DBC00168977 /* WDFridayTheme.h */,
+				2EC6827716972DBC00168977 /* WDFridayTheme.m */,
+			);
+			name = Theme;
+			sourceTree = "<group>";
+		};
+		2EC682791697302700168977 /* images */ = {
+			isa = PBXGroup;
+			children = (
+				2EC6827A1697302F00168977 /* themes */,
+			);
+			name = images;
+			sourceTree = "<group>";
+		};
+		2EC6827A1697302F00168977 /* themes */ = {
+			isa = PBXGroup;
+			children = (
+				2EC6827B1697303700168977 /* default */,
+			);
+			name = themes;
+			sourceTree = "<group>";
+		};
+		2EC6827B1697303700168977 /* default */ = {
+			isa = PBXGroup;
+			children = (
+				2EC6827C1697305F00168977 /* topShadow.png */,
+				2EC6827D1697305F00168977 /* topShadow@2x.png */,
+			);
+			name = default;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -236,6 +289,8 @@
 				2EC6823316971AFC00168977 /* Default@2x.png in Resources */,
 				2EC6823516971AFC00168977 /* Default-568h@2x.png in Resources */,
 				2EC6823816971AFC00168977 /* MainStoryboard.storyboard in Resources */,
+				2EC6827E1697305F00168977 /* topShadow.png in Resources */,
+				2EC6827F1697305F00168977 /* topShadow@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -273,6 +328,9 @@
 				2EC6822B16971AFB00168977 /* main.m in Sources */,
 				2EC6822F16971AFC00168977 /* AppDelegate.m in Sources */,
 				2EC6823B16971AFC00168977 /* ViewController.m in Sources */,
+				2EC6825C16971F2400168977 /* Theme.m in Sources */,
+				2EC6825F1697226C00168977 /* DefaultTheme.m in Sources */,
+				2EC6827816972DBC00168977 /* WDFridayTheme.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
