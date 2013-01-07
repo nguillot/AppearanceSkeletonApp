@@ -10,6 +10,7 @@
 
 @protocol Theme <NSObject>
 
+/*** common component **/
 //to use a color for navigation bar
 - (UIColor *)navigationTintColor;
 //to use an image for navigation bar
@@ -23,6 +24,8 @@
 - (CGSize)shadowOffset;
 - (UIColor *)shadowColor;
 
+/*** for several views ***/
+
 - (UIColor *)titleColor;
 - (UIFont *)titleFont;
 
@@ -32,7 +35,7 @@
 - (UIColor *)textColor;
 - (UIFont *)textFont;
 
-
+/*** specific to a view **/
 - (UIColor *)backgroundColor;
 
 @end

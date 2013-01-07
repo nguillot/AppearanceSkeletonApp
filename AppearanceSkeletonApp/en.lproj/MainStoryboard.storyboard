@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="2844" systemVersion="11G63" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="Jkp-wl-juc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="2844" systemVersion="11G63" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="Jkp-wl-juc">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1930"/>
     </dependencies>
@@ -12,45 +12,27 @@
                         <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="View Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Pa-eA-Dh6">
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="22" id="Q1h-J6-8gv"/>
-                                </constraints>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="View Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="5Pa-eA-Dh6">
+                                <rect key="frame" x="20" y="25" width="285" height="22"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="View Subtitle" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h65-T6-mpQ">
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="22" id="Fdu-mK-sl0"/>
-                                </constraints>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="View Subtitle" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="h65-T6-mpQ">
+                                <rect key="frame" x="20" y="55" width="280" height="22"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="TopLeft" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="275" translatesAutoresizingMaskIntoConstraints="NO" id="dD3-Zt-EJ4">
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="275" id="Sz9-aH-7ZV"/>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="338" type="user" id="zJ3-9A-SJ5"/>
-                                </constraints>
-                                <mutableString key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</mutableString>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="TopLeft" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="dD3-Zt-EJ4">
+                                <rect key="frame" x="25" y="85" width="275" height="338"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="5Pa-eA-Dh6" firstAttribute="centerX" secondItem="dD3-Zt-EJ4" secondAttribute="centerX" type="default" id="4qs-w5-2EL"/>
-                            <constraint firstAttribute="trailing" secondItem="h65-T6-mpQ" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="ASM-60-2Va"/>
-                            <constraint firstItem="h65-T6-mpQ" firstAttribute="top" secondItem="5Pa-eA-Dh6" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="E0C-cE-IKS"/>
-                            <constraint firstItem="dD3-Zt-EJ4" firstAttribute="top" secondItem="h65-T6-mpQ" secondAttribute="bottom" priority="992" constant="8" symbolic="YES" type="user" id="K2v-Pc-pP2"/>
-                            <constraint firstItem="h65-T6-mpQ" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="Sk4-47-BTL"/>
-                            <constraint firstAttribute="trailing" secondItem="dD3-Zt-EJ4" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="V9h-sm-Pfv"/>
-                            <constraint firstItem="5Pa-eA-Dh6" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="Zm2-Tl-dUl"/>
-                            <constraint firstItem="dD3-Zt-EJ4" firstAttribute="top" relation="lessThanOrEqual" secondItem="3" secondAttribute="top" constant="104" type="user" id="kNx-Uc-bBb"/>
-                            <constraint firstItem="5Pa-eA-Dh6" firstAttribute="top" secondItem="3" secondAttribute="top" constant="25" id="obY-y2-W7z"/>
-                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="My app" id="gaT-KF-Elf"/>
                     <connections>
@@ -84,9 +66,6 @@
         </scene>
     </scenes>
     <classes>
-        <class className="NSLayoutConstraint" superclassName="NSObject">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
-        </class>
         <class className="ViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/ViewController.h"/>
             <relationships>

@@ -18,8 +18,8 @@
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         // Create and return the theme:
-        sharedTheme = [[DefaultTheme alloc] init];
-        //sharedTheme = [[WDFridayTheme alloc] init];
+        //sharedTheme = [[DefaultTheme alloc] init];
+        sharedTheme = [[WDFridayTheme alloc] init];
     });
     
     return sharedTheme;
@@ -32,7 +32,10 @@
     UINavigationBar *navigationBarAppearance = [UINavigationBar appearance];
     [navigationBarAppearance setBackgroundImage:[theme navigationBackgroundForBarMetrics:UIBarMetricsDefault] forBarMetrics:UIBarMetricsDefault];
     [navigationBarAppearance setBackgroundImage:[theme navigationBackgroundForBarMetrics:UIBarMetricsLandscapePhone] forBarMetrics:UIBarMetricsLandscapePhone];
-    [navigationBarAppearance setShadowImage:[theme navigationBarShadow]];    
+    if([navigationBarAppearance respondsToSelector:@selector(setShadowImage:)]) {
+        //iOS 6
+        [navigationBarAppearance setShadowImage:[theme navigationBarShadow]];
+    }
     
     NSMutableDictionary *titleTextAttributes = [[NSMutableDictionary alloc] init];
     UIColor *mainColor = [theme viewTitleColor];

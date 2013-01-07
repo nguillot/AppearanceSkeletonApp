@@ -23,6 +23,7 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+    
     [ThemeManager customizeBackground:self.containerView];
     [ThemeManager customizeTitle:self.titleLbl];
     [ThemeManager customizeSubtitle:self.subtitleLbl];
